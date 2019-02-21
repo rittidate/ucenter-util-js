@@ -1,0 +1,28 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "pretty": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    // "emitDecoratorMetadata": true,
+    // "allowJs": true,
+    // "checkJs": true,
+    // "strict": true,
+    // "noImplicitAny": false,
+    // "strictNullChecks": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "test/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

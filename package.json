@@ -1,0 +1,12 @@
+{
+  "name": "ucenter-util",
+  "version": "0.1.0",
+  "description": "Common util for Ucenter",
+  "main": "./dist/index.js",
+  "scripts": {
+    "install": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rittidate Kittisarathamma",
+  "license": "ISC"
+}
