@@ -19,7 +19,7 @@ export class ArrayUtil {
         return result;
     }
 
-    removeItem(item: any, list: any[]) {
+    public static removeItem(item: any, list: any[]) {
         const index = list.indexOf(item);
         if (index !== -1) {
         list.splice(index, 1);
