@@ -7,10 +7,14 @@ export class ResourceManager {
   private static _resource: any = {}; // {};
   private static staticResource = {
 
-    [Language.English]: require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesEN.js')}`).Resources,
-    [Language.Thai]: require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesTH.js')}`).Resources
+    [Language.English]: require(`${path.join(process.env.PWD, 'src', 'resource', 'ResourcesEN.js')}`).Resources,
+    [Language.Thai]: require(`${path.join(process.env.PWD, 'src', 'resource', 'ResourcesTH.js')}`).Resources
   }
 
+  public static getResourceEN() {
+    return require(`${path.join(process.env.PWD, 'src', 'resource', 'ResourcesEN.js')}`).Resources
+  }
+  
   public static setResource(locale, overrideResources, flowResources) {
     const overrideResourceCopy = Object.assign({}, overrideResources);
     const updateStaticResources = Object.keys(this.staticResource).reduce(
@@ -48,7 +52,7 @@ export class ResourceManager {
   }
 
   public static getResourceByLocale(locale) {
-    const resourceLocale = locale === Language.English ? require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesEN.js')}`).Resources : require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesTH.js')}`).Resources;
+    const resourceLocale = locale === Language.English ? require(`${path.join(process.env.PWD, 'src', 'resource', 'ResourcesEN.js')}`).Resources : require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesTH.js')}`).Resources;
     return resourceLocale;
   }
 
