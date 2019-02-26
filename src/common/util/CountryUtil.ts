@@ -9,6 +9,6 @@ export class CountryUtil {
     }
 
     public static getCountry(country: string): any {
-        return this.country.en;
+        return this.country[country.toLowerCase()];
     }
 }
