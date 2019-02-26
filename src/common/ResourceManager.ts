@@ -6,8 +6,8 @@ export class ResourceManager {
 
   private static _resource: any = {}; // {};
   private static staticResource = {
-    [Language.English]: require(paths['appResources'] + '/ResourcesEN.js').Resources,
-    [Language.Thai]: require(paths['appResources'] + '/ResourcesTH.js').Resources
+    [Language.English]: require(paths['appResource'] + '/ResourcesEN.js').Resources,
+    [Language.Thai]: require(paths['appResource'] + '/ResourcesTH.js').Resources
   }
 
   public static setResource(locale, overrideResources, flowResources) {
