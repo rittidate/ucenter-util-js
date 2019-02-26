@@ -6,12 +6,9 @@ export class ResourceManager {
 
   private static _resource: any = {}; // {};
   private static staticResource = {
-    [Language.English]: require(`${path.resolve('src/resource/ResourcesEN.js')}`).Resources,
-    [Language.Thai]: require(`${path.resolve('src/resource/ResourcesTH.js')}`).Resources
-  }
 
-  public static getResourceEN() {
-    return require(`${path.resolve('src/resource/ResourcesEN.js')}`).Resources;
+    [Language.English]: require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesEN.js')}`).Resources,
+    [Language.Thai]: require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesTH.js')}`).Resources
   }
 
   public static setResource(locale, overrideResources, flowResources) {
@@ -51,7 +48,7 @@ export class ResourceManager {
   }
 
   public static getResourceByLocale(locale) {
-    const resourceLocale = locale === Language.English ? require(`${path.resolve('src/resource/ResourcesEN.js')}`).Resources : require(`${path.resolve('src/resource/ResourcesTH.js')}`).Resources;
+    const resourceLocale = locale === Language.English ? require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesEN.js')}`).Resources : require(`${path.join(process.cwd(), 'src', 'resource', 'ResourcesTH.js')}`).Resources;
     return resourceLocale;
   }
 
