@@ -14,6 +14,7 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
     // "emitDecoratorMetadata": true,
     // "allowJs": true,
     // "checkJs": true,

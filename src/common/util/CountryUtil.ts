@@ -1,5 +1,5 @@
-import * as country_en from '../resources/country/country_en.json';
-import * as country_th from '../resources/country/country_th.json';
+import * as country_en from '../resource/country/country_en.json'
+import * as country_th from '../resource/country/country_th.json';
 
 export class CountryUtil {
 
